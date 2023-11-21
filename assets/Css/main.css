@@ -215,7 +215,7 @@ img {
         padding: 50px 25px;
         position: fixed;
         left: -100%;
-        top: 54.5px;
+        top: 54px;
         min-height: calc(100vh - 55px);
         width: 80%;
         background-color: #1e1e1e;
