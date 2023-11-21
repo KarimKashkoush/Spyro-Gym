@@ -43,6 +43,25 @@ img {
     text-transform: capitalize;
 }
 
+.header_container {
+    text-align: center;
+    max-width: 500px;
+    margin: 0 auto 50px;
+    padding-inline: 15px;
+}
+
+.header_container h2 {
+    color: var(--w-color);
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.header_container p {
+    color: var(--w-color);
+    font-size: 18px;
+    line-height: 1.6;
+}
+
 .container {
     padding-inline: 15px;
     margin-inline: auto;
@@ -79,16 +98,19 @@ img {
     justify-content: center;
     align-items: center;
 }
+
 .loading svg {
     font-size: 100px;
     color: var(--main-color);
     animation: loading 2s linear infinite;
 }
+
 @keyframes loading {
     100% {
         rotate: 360deg;
     }
 }
+
 /* loading */
 /* Start Header */
 .header {
@@ -204,7 +226,7 @@ img {
     display: none;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 750px) {
 
     .open_nav,
     .close_nav {
@@ -286,6 +308,7 @@ img {
     color: var(--w-color);
     font-family: 'Orbitron', sans-serif;
 }
+
 .landding .container .content h2 span {
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke: 1px var(--main-color);
@@ -303,5 +326,144 @@ img {
         font-size: 45px;
     }
 }
+
 /* End Landding */
 
+/* Start Moves */
+.moves {
+    background-color: var(--sub-color);
+    padding-block: var(--p-80);
+}
+.moves .container .boxs {
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+}
+.moves .container .boxs .box {
+    position: relative;
+    border-top-left-radius: 50px;
+    overflow: hidden;
+}
+.moves .container .boxs .box:nth-child( 1 ) {
+    flex: 3;
+    border-top-left-radius: 100px;
+}
+
+.moves .container .boxs .box img {
+    width: 100%;
+    height: 100%;
+}
+.moves .container .boxs .box > h2 {
+    position: absolute;
+    bottom: 15px;
+    left: 50px;
+    line-height: 1.6;
+    color: var(--w-color);
+    text-transform: capitalize;
+    font-weight: 400;
+}
+.moves .container .boxs .box .title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+.moves .container .boxs .box .title h2 {
+    line-height: 1.6;
+    color: var(--w-color);
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.moves .container .boxs .box .title p {
+    line-height: 1.6;
+    color: var(--w-color);
+    font-size: 16px;
+}
+
+@media (max-width: 992px) {
+    .moves .container .boxs {
+        flex-direction: column;
+        align-items: center;
+        gap: 50;
+    }
+    .moves .container .boxs .box:not(.moves .container .boxs .box:first-child) {
+        height: 400px;
+        max-width: 250px;
+    }
+    .moves .container .boxs .box .title {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+/* End Moves */
+/* Start lifeStyle */
+.lifestyle {
+    background-color: var(--sub-color);
+    padding-block: var(--p-80);
+}
+
+.lifestyle .container {
+    position: relative;
+}
+.lifestyle .container::before {
+    content: "";
+    position: absolute;
+    bottom: 130px;
+    right: 0;
+    width: 15%;
+    height: 60px;
+    background-color: #ff450160;
+}
+.lifestyle .container::after {
+    content: "";
+    position: absolute;
+    bottom: 50px;
+    right: 0;
+    width: 20%;
+    height: 60px;
+    background-color: #ff450160;
+}
+.lifestyle .image {
+    width: 450px;
+    margin: auto;
+    position: relative;
+    z-index: 2;
+}
+.lifestyle .image::before {
+    content:"";
+    position: absolute;
+    z-index: 2;
+    right: -7px;
+    bottom: 0;
+    height: 65%;
+    width: 7px;
+    background-color: var(--main-color);
+    border-top-right-radius: 30px;
+}
+.lifestyle .image::after {
+    content:"";
+    position: absolute;
+    z-index: 2;
+    left: -7px;
+    bottom: 0;
+    height: 45%;
+    width: 7px;
+    background-color: var(--main-color);
+    border-top-left-radius: 30px;
+}
+.lifestyle .image img {
+    display: block;
+    width: 100%;
+    margin: auto;
+    border-bottom: 7px solid var(--main-color);
+}
+
+
+@media (max-width: 850px) {
+    .lifestyle .image {
+        max-width: 250px;
+    }
+}
+/* End lifeStyle */
