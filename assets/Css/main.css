@@ -18,7 +18,6 @@ body {
     font-family: "Cairo", sans-serif;
     font-family: "Inter", sans-serif;
     scroll-behavior: smooth;
-    height: 10000px;
 }
 
 ul {
@@ -67,6 +66,30 @@ img {
     }
 }
 
+/* loading */
+.loading {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: var(--sub-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loading svg {
+    font-size: 100px;
+    color: var(--main-color);
+    animation: loading 2s linear infinite;
+}
+@keyframes loading {
+    100% {
+        rotate: 360deg;
+    }
+}
+/* loading */
 /* Start Header */
 .header {
     position: fixed;

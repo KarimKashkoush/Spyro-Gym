@@ -1,3 +1,10 @@
+// -_- ;oading Page -_-
+let loading = document.getElementById("loading");
+window.onload = _=> {
+    loading.style.display= "none";
+}
+
+
 // -_- open and close nav -_-
 let navBar = document.getElementById("navBar");
 let openNavBtn = document.getElementById("openNav");
