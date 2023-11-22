@@ -23,3 +23,38 @@ body.onscroll = (_) => {
         header.style.backgroundColor = "transparent";
     }
 };
+// -_- Video -_-
+let openVideo = document.getElementById("openVideo");
+let closeVideo = document.getElementById("closeVideo");
+let video = document.getElementById("video");
+
+openVideo.onclick = _ => {
+    video.style.width = '70%';
+}
+closeVideo.onclick = _ => {
+    video.style.width = '0';
+}
+
+const swiperEl = document.querySelector('swiper-container')
+Object.assign(swiperEl, {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    pagination: {
+        clickable: true,
+    },
+    breakpoints: {
+        640: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+        },
+        768: {
+            slidesPerView: 4,
+            spaceBetween: 40,
+        },
+        1024: {
+            slidesPerView: 5,
+            spaceBetween: 50,
+        },
+    },
+});
+swiperEl.initialize();
