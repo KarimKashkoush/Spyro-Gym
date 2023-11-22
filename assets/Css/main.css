@@ -792,6 +792,7 @@ img {
 }
 .video .container .image .video video {
     width: 100%;
+    object-fit:cover;
     position: absolute;
     top: 50%;
     left: 50%;
