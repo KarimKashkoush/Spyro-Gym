@@ -5,20 +5,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Spyro Gym</title>
-    <!-- Style File -->
-    <link rel="stylesheet" href="assets/Css/normalize.css" />
-    <link rel="stylesheet" href="assets/Css/main.css" />
+    <!-- Swiper Style -->
+    <link rel="stylesheet" href="assets/Css/swiper.css">
     <!-- Google Fonts -->
     <link
-        href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900;1000&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet" />
+    href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900;1000&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
     <!-- Font Awesome -->
     <link rel="stylesheet" href="assets/Css/all.css" />
     <link
-        href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900;1000&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Orbitron:wght@700&display=swap"
-        rel="stylesheet" />
+    href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900;1000&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Orbitron:wght@700&display=swap"
+    rel="stylesheet" />
     <!-- Swiper -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Style File -->
+    <link rel="stylesheet" href="assets/Css/normalize.css" />
+    <link rel="stylesheet" href="assets/Css/main.css" />
+    </style>
 </head>
 
 <body class="en">
@@ -319,7 +322,9 @@
                     <img src="assets/Images/play_video.png" alt="image" />
                 </section>
                 <section class="video" id="video">
-                    <video src="assets/Images/videoo.mp4" autoplay muted></video>
+                    <video autoplay muted playsinline>
+                        <source src="assets/Images/videoo.mp4" type="video/mp4" />
+                    </video>
                     <section id="closeVideo">
                         <i class="fa-solid fa-pause"></i>
                     </section>
@@ -329,27 +334,179 @@
     </section>
     <!-- End video -->
     <!-- Start Feedback -->
-    <section class="feedback">
+    <!-- <section class="feedback">
         <section class="header_container">
             <h2>Client’s Feedback</h2>
         </section>
         <section class="container">
-            <swiper-container class="mySwiper" init="false">
-                <swiper-slide>Slide 1</swiper-slide>
-                <swiper-slide>Slide 2</swiper-slide>
-                <swiper-slide>Slide 3</swiper-slide>
-                <swiper-slide>Slide 4</swiper-slide>
-                <swiper-slide>Slide 5</swiper-slide>
-                <swiper-slide>Slide 6</swiper-slide>
-                <swiper-slide>Slide 7</swiper-slide>
-                <swiper-slide>Slide 8</swiper-slide>
-                <swiper-slide>Slide 9</swiper-slide>
+            <swiper-container class="mySwiper" pagination="true" pagination-dynamic-bullets="true" slides-per-view="2">
+                <swiper-slide>
+                    <section class="feedback_user">
+                        <p>
+                            Al-Balad is essentially Jeddah old town. It was once surrounded by a wall, but now only the gates re
+                        </p>
+                        <section class="stars">
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </section>
+                        <section class="user">
+                            <img src="assets/Images/user-1.png" alt="">
+                            <h2>Courtney Henry</h2>
+                        </section>
+                    </section>
+                </swiper-slide>
+                <swiper-slide>
+                    <section class="feedback_user">
+                        <p>
+                            This a great historic site to visit. I rented a little cart and the driver was a really good friendl                        
+                        </p>
+                        <section class="stars">
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </section>
+                        <section class="user">
+                            <img src="assets/Images/user-2.png" alt="">
+                            <h2>Brooklyn Simmons</h2>
+                        </section>
+                    </section>
+                </swiper-slide>
+                <swiper-slide>
+                    <section class="feedback_user">
+                        <p>
+                            I had been to Al Balad several times. It is one of my favorite places in Jeddah. It is historic, ful                        
+                        </p>
+                        <section class="stars">
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </section>
+                        <section class="user">
+                            <img src="assets/Images/user-3.png" alt="">
+                            <h2>Jane Cooper</h2>
+                        </section>
+                    </section>
+                </swiper-slide>
+                <swiper-slide>
+                    <section class="feedback_user">
+                        <p>
+                            Al-Balad is essentially Jeddah old town. It was once surrounded by a wall, but now only the gates re
+                        </p>
+                        <section class="stars">
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </section>
+                        <section class="user">
+                            <img src="assets/Images/user-1.png" alt="">
+                            <h2>Courtney Henry</h2>
+                        </section>
+                    </section>
+                </swiper-slide>
+                <swiper-slide>
+                    <section class="feedback_user">
+                        <p>
+                            This a great historic site to visit. I rented a little cart and the driver was a really good friendl                        
+                        </p>
+                        <section class="stars">
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </section>
+                        <section class="user">
+                            <img src="assets/Images/user-2.png" alt="">
+                            <h2>Brooklyn Simmons</h2>
+                        </section>
+                    </section>
+                </swiper-slide>
+                <swiper-slide>
+                    <section class="feedback_user">
+                        <p>
+                            I had been to Al Balad several times. It is one of my favorite places in Jeddah. It is historic, ful                        
+                        </p>
+                        <section class="stars">
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </section>
+                        <section class="user">
+                            <img src="assets/Images/user-3.png" alt="">
+                            <h2>Jane Cooper</h2>
+                        </section>
+                    </section>
+                </swiper-slide>
+                <swiper-slide>
+                    <section class="feedback_user">
+                        <p>
+                            Al-Balad is essentially Jeddah old town. It was once surrounded by a wall, but now only the gates re
+                        </p>
+                        <section class="stars">
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </section>
+                        <section class="user">
+                            <img src="assets/Images/user-1.png" alt="">
+                            <h2>Courtney Henry</h2>
+                        </section>
+                    </section>
+                </swiper-slide>
+                <swiper-slide>
+                    <section class="feedback_user">
+                        <p>
+                            This a great historic site to visit. I rented a little cart and the driver was a really good friendl                        
+                        </p>
+                        <section class="stars">
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </section>
+                        <section class="user">
+                            <img src="assets/Images/user-2.png" alt="">
+                            <h2>Brooklyn Simmons</h2>
+                        </section>
+                    </section>
+                </swiper-slide>
+                <swiper-slide>
+                    <section class="feedback_user">
+                        <p>
+                            I had been to Al Balad several times. It is one of my favorite places in Jeddah. It is historic, ful                        
+                        </p>
+                        <section class="stars">
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </section>
+                        <section class="user">
+                            <img src="assets/Images/user-3.png" alt="">
+                            <h2>Jane Cooper</h2>
+                        </section>
+                    </section>
+                </swiper-slide>
             </swiper-container>
-        </section>
-    </div>
+        </section> -->
     <!-- End Feedback -->
-    <!-- Swiper -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Swiper Java Script -->
+    <script src="assets/JavaScript/swiper.js"></script>
     <!-- Java Script File -->
     <script src="assets/JavaScript/main.js"></script>
     <script src="assets/JavaScript/all.js"></script>

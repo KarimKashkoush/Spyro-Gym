@@ -625,6 +625,7 @@ img {
 .classes .container .box .links {
     display: flex;
     justify-content: space-between;
+    gap: 10px;
 } 
 .classes .container .box .links a {
     color: var(--w-color);
@@ -633,6 +634,7 @@ img {
     padding: 10px 20px;
     transform: skewX(-20deg);
     border: 1px solid var(--w-color);
+    text-align: center;
 }
 .classes .container .box .links a:first-child {
     border: none;
@@ -641,6 +643,14 @@ img {
 .classes .container .box .links a span {
     display: block;
     transform: skewX(20deg);
+}
+@media (max-width: 450px) {
+    .classes .container .box .links a {
+        font-size: 14px;
+    }
+    .classes .container {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    }
 }
 /* End Classes */
 /* Start Instructors */
@@ -821,6 +831,147 @@ img {
     }
 }
 /* End Video */
+/* Start Feedback */
+.feedback {
+    padding-block: var(--p-80);
+    background-image: url(../Images/bg-classes.png);
+}
+.feedback_user {
+    max-width: 360px;
+    background-color: #00000059;
+    padding: 30px;
+    border-bottom: 10px solid var(--main-color);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.feedback_user p {
+    color: var(--w-color);
+    line-height: 1.6;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.feedback_user .stars {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 35px;
+}
+.feedback_user .stars svg {
+    font-size: 25px;
+    color: var(--main-color);
+    cursor: pointer;
+}
+.feedback_user .user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.feedback_user .user img {
+    width: 60px;
+}
+.feedback_user .user h2 {
+    color: var(--w-color);
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.6;
+}
+/* End Feedback */
+.swiper-slide-next,
+.swiper-slide-active {
+    display: flex;
+    justify-content: center;
+    padding-inline: 15px;
+    margin-bottom: 50px;
+}
+@media (max-width: 1000px) {
+    .feedback_user p {
+        font-size: 14px;
+    }
+    .feedback_user .user h2 {
+        font-size: 18px;
+    }
+    .feedback_user .stars svg {
+        font-size: 18px;
+        color: var(--main-color);
+        cursor: pointer;
+    }
+}
+@media (max-width: 650px) {
+    
+}
+
+
+/* Start Question */
+.asked_question {
+    padding-block: var(--p-80);
+}
+.asked_question .container .box {
+    margin-bottom: 20px;
+}
+.asked_question .container .question {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding-bottom: 5px;
+    padding-left: 10px;
+}
+.asked_question .container .question::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--w-color);
+}
+.asked_question .container .question h2 {
+    color: var(--w-color);
+    font-size: 24px;
+    line-height: 1.6;
+    gap: 20px;
+}
+
+.asked_question .container .question > section {
+    cursor: pointer;
+    padding: 10px 10px 0;
+    position: relative;
+}
+.asked_question .container .question > section svg {
+    color: var(--w-color);
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.asked_question .container .answer {
+    background-color: #ff450160;
+    transform: skewX(-10deg);
+    margin: auto;
+    width: 0;
+}
+.asked_question .container .answer p {
+    color: var(--w-color);
+    font-size: 18px;
+    line-height: 1.6;
+    display: none;
+}
+.asked_question .container .active {
+    width: calc(85% - 20px);
+    padding: 20px;
+}
+.asked_question .container .active p {
+    display: block;
+}
+#openCloseAnswer {
+    display: block;
+}
+@media (max-width: 786px) {
+    .asked_question .container .answer {
+        transform: skewX(0deg);
+    }
+}
+/* End Question */
 
 
 
