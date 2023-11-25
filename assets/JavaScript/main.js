@@ -34,7 +34,18 @@ openVideo.onclick = _ => {
 closeVideo.onclick = _ => {
     video.style.width = '0';
 }
+// -_- question -_-
 
-
-
-
+let askBox = document.querySelectorAll(".ask_box");
+askBox.forEach(function (ele) {
+    ele.onclick = function () {
+        if (this.classList.contains("active")) {
+            this.classList.remove("active")
+        }else {
+            this.classList.add("active")
+        }
+    }
+})
+// -_- copyRight -_-
+let copyRight = document.getElementById("copyRight");
+copyRight.innerHTML += `SPYRO ${new Date().getFullYear()}. All rights reserved.`
