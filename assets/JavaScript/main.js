@@ -1,4 +1,17 @@
-// -_- ;oading Page -_-
+// -_- Scroll Top -_-
+let btnScroll = document.getElementById("scrollTop");
+
+document.onscroll = function(){
+    if (window.scrollY > 150) {
+        btnScroll.style.display = "block";
+    } else {
+        btnScroll.style.display = "none";
+    }
+}
+btnScroll.onclick = function() {
+    window.scroll(0,0)
+}
+// -_- Loading Page -_-
 let loading = document.getElementById("loading");
 window.onload = (_) => {
     loading.style.display = "none";
